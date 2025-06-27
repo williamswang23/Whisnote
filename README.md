@@ -36,8 +36,8 @@
 
 ```bash
 # 当您有了仓库 URL 后，替换此处的链接
-git clone https://github.com/your-username/voice-cli.git
-cd voice-cli
+git clone https://github.com/williamswang23/Whisnote.git
+cd Whisnote
 ```
 
 ### 2. 安装依赖

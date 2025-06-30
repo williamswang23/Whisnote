@@ -70,6 +70,53 @@ security add-generic-password \
 
 要验证密钥是否已存储成功，可以运行 `voice config`。如果成功，它将显示一个经过脱敏处理的密钥。
 
+## 🔗 设置终端别名 (推荐)
+
+为了在任何目录下都能直接使用 `voice` 命令，建议设置一个终端别名。
+
+### 自动设置别名
+
+在项目目录下运行以下命令，将自动为您添加别名到shell配置文件：
+
+```bash
+# 对于 zsh 用户 (macOS 默认)
+echo "alias voice='python $(pwd)/voice_cli.py'" >> ~/.zshrc
+source ~/.zshrc
+
+# 对于 bash 用户
+echo "alias voice='python $(pwd)/voice_cli.py'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 手动设置别名
+
+您也可以手动编辑shell配置文件：
+
+```bash
+# 编辑 zsh 配置文件
+nano ~/.zshrc
+
+# 在文件末尾添加以下行 (将路径替换为您的实际项目路径)
+alias voice='python /path/to/your/Whisnote/voice_cli.py'
+
+# 保存文件后重新加载配置
+source ~/.zshrc
+```
+
+### 验证别名设置
+
+设置完成后，您可以在任何目录下测试：
+
+```bash
+# 测试别名是否生效
+voice --help
+
+# 查看当前设置的别名
+alias | grep voice
+```
+
+如果看到帮助信息，说明别名设置成功！现在您可以在系统的任何位置使用 `voice` 命令了。
+
 ## 🎤 使用方法
 
 Whisnote 的设计直观易用。
